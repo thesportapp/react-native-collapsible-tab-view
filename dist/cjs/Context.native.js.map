@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": ["../../src/Context.tsx"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAkB;AAIX,MAAM,UAAU,aAAAA,QAAM;AAAA,EAC3B;AACF,GACa,iBAAiB,aAAAA,QAAM;AAAA,EAClC;AACF;",
+  "names": ["React"]
+}

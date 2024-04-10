@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": ["../../src/Tab.tsx"],
+  "mappings": "AAmBS;AADF,SAAS,IAAuB,EAAE,SAAS,GAAgB;AAChE,SAAO,gCAAG,UAAS;AACrB;",
+  "names": []
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": ["../../src/Tab.tsx"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAkB;AAkBX,SAAS,IAAuB,EAAE,SAAS,GAAgB;AAChE,SAAO,6BAAAA,QAAA,2BAAAA,QAAA,gBAAG,QAAS;AACrB;",
+  "names": ["React"]
+}

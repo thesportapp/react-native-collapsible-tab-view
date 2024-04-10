@@ -1,3 +1,4 @@
+
 import React from 'react'
 import {
   LayoutChangeEvent,
@@ -18,6 +19,12 @@ export type MaterialTabItemProps<T extends TabName> = TabItemProps<T> & {
   onLayout?: (event: LayoutChangeEvent) => void
   scrollEnabled?: boolean
 
+  // Add the missing properties to this type
+  activeTabStyle?: StyleProp<ViewStyle>;
+  allowTabScroll?: boolean;
+  activeLabelStyle?: StyleProp<TextStyle>;
+
+
   style?: StyleProp<ViewStyle>
   /**
    * Style to apply to the tab item label
@@ -37,6 +44,11 @@ export type MaterialTabItemProps<T extends TabName> = TabItemProps<T> & {
 } & Omit<PressableProps, 'onPress' | 'children'>
 
 export type MaterialTabBarProps<N extends TabName> = TabBarProps<N> & {
+  // Add the missing properties to this type
+  activeTabStyle?: StyleProp<ViewStyle>;
+  allowTabScroll?: boolean;
+  activeLabelStyle?: StyleProp<TextStyle>;
+
   /**
    * Indicates whether the tab bar should contain horizontal scroll, when enabled the tab width is dynamic
    */

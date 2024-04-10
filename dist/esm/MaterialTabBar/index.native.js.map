@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": ["../../../src/MaterialTabBar/index.tsx"],
+  "mappings": "AAAA,SAAS,gBAAgB,qBAAqB;AAC9C,SAAS,uBAAuB;",
+  "names": []
+}
