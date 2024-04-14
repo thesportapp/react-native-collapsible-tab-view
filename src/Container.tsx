@@ -4,6 +4,7 @@ import {
     StyleSheet,
     useWindowDimensions,
     View,
+    Text
 } from 'react-native'
 import PagerView from 'react-native-pager-view'
 import Animated, {
@@ -81,7 +82,8 @@ export const Container = React.memo(
                 onTabChange,
                 width: customWidth,
                 allowHeaderOverscroll,
-                CustomHeaderWrapper
+                CustomHeaderWrapper,
+                CustomAbsoluteComponent
             },
             ref
         ) => {
@@ -448,7 +450,12 @@ export const Container = React.memo(
 
                             </CustomHeaderWrapperContainer>
 
+                            {CustomAbsoluteComponent ? CustomAbsoluteComponent() : null}
+
                         </Animated.View>
+
+
+
 
                         <AnimatedPagerView
                             ref={containerRef}
@@ -457,6 +464,7 @@ export const Container = React.memo(
                             {...pagerProps}
                             style={[pagerProps?.style, StyleSheet.absoluteFill]}
                         >
+
                             {tabNamesArray.map((tabName, i) => {
                                 return (
                                     <View key={i}>
@@ -477,6 +485,9 @@ export const Container = React.memo(
                                     </View>
                                 )
                             })}
+
+
+
                         </AnimatedPagerView>
                     </Animated.View>
                 </Context.Provider>
