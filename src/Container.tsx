@@ -430,31 +430,52 @@ export const Container = React.memo(
                                             tabProps,
                                         })}
                                 </View>
-                                <View
-                                    style={[styles.container, styles.tabBarContainer, CustomHeaderWrapper && {backgroundColor: 'transparent'}]}
-                                    onLayout={getTabBarHeight}
-                                    pointerEvents="box-none"
-                                >
-                                    {renderTabBar &&
-                                        renderTabBar({
-                                            containerRef,
-                                            index,
-                                            tabNames: tabNamesArray,
-                                            focusedTab,
-                                            indexDecimal,
-                                            width,
-                                            onTabPress,
-                                            tabProps,
-                                        })}
-                                </View>
+                                <View>
+                                    <View
+                                        style={[styles.container, styles.tabBarContainer, CustomHeaderWrapper && {
+                                            backgroundColor: 'transparent',
 
+
+                                        },
+                                            {
+                                                display: 'flex',
+                                                flex: 1,
+                                                flexDirection: 'row',
+                                                alignItems: 'center',
+
+                                            }
+                                        ]}
+                                        onLayout={getTabBarHeight}
+                                        pointerEvents="box-none"
+                                    >
+                                        <View style={ {
+                                            display: 'flex',
+                                            flex: 1,
+                                            flexDirection: 'row',
+                                            alignItems: 'center',
+
+                                        }}>
+                                            {renderTabBar &&
+                                                renderTabBar({
+                                                    containerRef,
+                                                    index,
+                                                    tabNames: tabNamesArray,
+                                                    focusedTab,
+                                                    indexDecimal,
+                                                    width,
+                                                    onTabPress,
+                                                    tabProps,
+                                                })}
+                                        </View>
+
+                                        {CustomAbsoluteComponent ? CustomAbsoluteComponent() : null}
+
+                                    </View>
+                                </View>
                             </CustomHeaderWrapperContainer>
 
-                            {CustomAbsoluteComponent ? CustomAbsoluteComponent() : null}
 
                         </Animated.View>
-
-
 
 
                         <AnimatedPagerView
@@ -485,7 +506,6 @@ export const Container = React.memo(
                                     </View>
                                 )
                             })}
-
 
 
                         </AnimatedPagerView>
