@@ -111,7 +111,6 @@
     ]
   },
   "dependencies": {
-    "@tamagui/build": "^1.75.9",
     "use-deep-compare": "^1.1.0"
   },
   "packageManager": "yarn@1.22.11",
